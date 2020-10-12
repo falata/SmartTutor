@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TutorDetailActivity"></activity>
+        <activity android:name=".CreateAccountActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".TutorDetailActivity" />
         <activity android:name=".TutorActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -16,8 +16,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".TutorDetailActivity" />
         <activity android:name=".TutorActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,5 +24,5 @@
             </intent-filter>
         </activity>
     </application>
-<uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>

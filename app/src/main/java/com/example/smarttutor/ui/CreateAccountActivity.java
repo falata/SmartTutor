@@ -1,8 +1,10 @@
-package com.example.smarttutor;
+package com.example.smarttutor.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.smarttutor.R;
 
 public class CreateAccountActivity extends AppCompatActivity {
 

@@ -9,11 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateAccountActivity"></activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".TutorDetailActivity" />
-        <activity android:name=".TutorActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.TutorFormActivity"></activity>
+        <activity android:name=".ui.CreateAccountActivity" />
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.TutorDetailActivity" />
+        <activity android:name=".ui.TutorActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.smarttutor.ui.MainActivity" />
+
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

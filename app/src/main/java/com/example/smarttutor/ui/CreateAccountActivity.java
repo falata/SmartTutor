@@ -1,14 +1,16 @@
-package com.example.smarttutor;
+package com.example.smarttutor.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class TutorActivity extends AppCompatActivity {
+import com.example.smarttutor.R;
+
+public class CreateAccountActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tutor);
+        setContentView(R.layout.activity_create_account);
     }
 }

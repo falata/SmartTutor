@@ -5,7 +5,6 @@
     tools:context="com.example.smarttutor.ui.MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="#000000">
     <ImageView
         android:layout_width="wrap_content"
@@ -13,6 +12,7 @@
         android:id="@+id/imageView"
         android:src="@drawable/background"
         android:scaleType="centerCrop" />
+
     <TextView
         android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
@@ -20,32 +20,37 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
+        android:fontFamily="@font/bubblegum_sans"
         android:text="SmartTutor"
-        android:textColor="@color/colorPrimary"
-        android:textSize="40sp"
+        android:textColor="@color/colorAccent"
+        android:textSize="50sp"
         android:textStyle="bold" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" Become a Tutor"
+        android:fontFamily="@font/bubblegum_sans"
         android:id="@+id/becomeTutor"
         android:background="@color/colorPrimary"
         android:textColor="@color/colorTextIcons"
         android:visibility="visible"
+        android:textSize="30sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Find Tutors"
-        android:layout_above="@+id/becomeTutor"
+        android:visibility="visible"
+        android:textSize="30sp"
+        android:fontFamily="@font/bubblegum_sans"
         android:id="@+id/findTutorsButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/becomeTutor"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
         android:background="@color/colorAccent"
         android:textColor="@color/colorTextIcons" />
-
 
 </RelativeLayout>

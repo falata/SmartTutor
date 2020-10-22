@@ -16,19 +16,22 @@ import org.parceler.Parcels;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class TutorDetailActivity extends AppCompatActivity {
-    @BindView(R.id.viewPager)
-    ViewPager mViewPager;
+    @BindView(R.id.viewPager) ViewPager mViewPager;
     private TutorPagerAdapter adapterViewPager;
-    List<TutorResponse> mTutor;
+    List<TutorResponse> mTutors;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tutor_detail);mTutor = Parcels.unwrap(getIntent().getParcelableExtra("tutors"));
+        setContentView(R.layout.activity_tutor_detail);
+        ButterKnife.bind(this);
+
+        mTutors = Parcels.unwrap(getIntent().getParcelableExtra("tutors"));
         int startingPosition = getIntent().getIntExtra("position", 0);
 
-        adapterViewPager = new TutorPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, mTutor);
+        adapterViewPager = new TutorPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, mTutors);
         mViewPager.setAdapter(adapterViewPager);
         mViewPager.setCurrentItem(startingPosition);
 

@@ -1,5 +1,6 @@
 package com.example.smarttutor.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -8,13 +9,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.recyclerview.widget.ListAdapter;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.smarttutor.R;
-import com.example.smarttutor.models.Tutor;
+
 import com.example.smarttutor.models.TutorResponse;
+import com.example.smarttutor.ui.MainActivity;
 import com.example.smarttutor.ui.TutorActivity;
+import com.example.smarttutor.ui.TutorDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
@@ -53,14 +56,11 @@ public class TutorListAdapter  extends RecyclerView.Adapter<TutorListAdapter.Tut
     }
 
     public class TutorViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        @BindView(R.id.tutorImageView)
-        ImageView mTutorImageView;
-        @BindView(R.id.tutorNameTextView)
-        TextView mNameTextView;
-        @BindView(R.id.subjectsTextView)
-        TextView mSubjectsTextView;
-        @BindView(R.id.ratingTextView)
-        TextView mRatingTextView;
+        @BindView(R.id.tutorImageView)ImageView mTutorImageView;
+        @BindView(R.id.tutorNameTextView) TextView mNameTextView;
+        @BindView(R.id.subjectsTextView) TextView mSubjectsTextView;
+        @BindView(R.id.ratingTextView) TextView mRatingTextView;
+
         private Context mContext;
 
         public TutorViewHolder(View itemView) {
@@ -83,7 +83,7 @@ public class TutorListAdapter  extends RecyclerView.Adapter<TutorListAdapter.Tut
         @Override
         public void onClick(View v) {
             int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, TutorActivity.class);
+            Intent intent = new Intent(mContext, TutorDetailActivity.class);
             intent.putExtra("position", itemPosition);
             intent.putExtra("tutors", Parcels.wrap(mTutor));
             mContext.startActivity(intent);

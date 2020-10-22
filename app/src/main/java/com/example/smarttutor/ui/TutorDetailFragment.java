@@ -1,7 +1,5 @@
 package com.example.smarttutor.ui;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -18,21 +16,23 @@ import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link TutorDetailFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class TutorDetailFragment extends Fragment {
 
-public class TutorDetailFragment extends Fragment implements View.OnClickListener{
     @BindView(R.id.tutorImageView) ImageView mImageLabel;
     @BindView(R.id.tutorNameTextView) TextView mNameLabel;
     @BindView(R.id.subjectsTextView) TextView mSubjectsLabel;
     @BindView(R.id.ratingTextView) TextView mRatingLabel;
-    //@BindView(R.id.bioTextView) TextView mBioLabel;
-    //@BindView(R.id.phoneTextView) TextView mPhoneLabel;
-    //@BindView(R.id.experienceTextView) TextView mExperienceLabel;
+    @BindView(R.id.experienceTextView) TextView mExperienceLabel;
+    @BindView(R.id.phoneTextView) TextView mPhoneLabel;
+    @BindView(R.id. bioTextView) TextView mBioLabel;
 
 
     private TutorResponse mTutor;
@@ -41,10 +41,17 @@ public class TutorDetailFragment extends Fragment implements View.OnClickListene
         // Required empty public constructor
     }
 
-    public static TutorDetailFragment newInstance(TutorResponse tutorResponse) {
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+
+     * @return A new instance of fragment TutorDetailFragment.
+     */
+    public static TutorDetailFragment newInstance(TutorResponse tutor) {
         TutorDetailFragment tutorDetailFragment = new TutorDetailFragment();
         Bundle args = new Bundle();
-        args.putParcelable("restaurant", Parcels.wrap(tutorDetailFragment));
+        args.putParcelable("tutor", Parcels.wrap(tutor));
         tutorDetailFragment.setArguments(args);
         return tutorDetailFragment;
     }
@@ -59,23 +66,15 @@ public class TutorDetailFragment extends Fragment implements View.OnClickListene
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tutor_detail, container, false);
         ButterKnife.bind(this, view);
-        //mPhoneLabel.setOnClickListener(this);
-        Picasso.get().load(mTutor.getImageUrl()).into(mImageLabel);
 
+        Picasso.get().load(mTutor.getImageUrl()).into(mImageLabel);
         mNameLabel.setText(mTutor.getName());
+        mSubjectsLabel.setText(mTutor.getSubjects());
         mRatingLabel.setText(Double.toString(mTutor.getRating()) + "/5");
-        //mPhoneLabel.setText(mTutor.getPhone());
-        //mBioLabel.setText(mTutor.getBio());
-        //mExperienceLabel.setText(mTutor.getPhone());
-        mSubjectsLabel.setText(mTutor.getBio());
+        mPhoneLabel.setText(mTutor.getPhone());
+        mExperienceLabel.setText(mTutor.getExperience());
+        mBioLabel.setText(mTutor.getBio());
         return view;
     }
-    @Override
-    public void onClick(View v) {
-       // if (v == mPhoneLabel) {
-            Intent phoneIntent = new Intent(Intent.ACTION_DIAL,
-                    Uri.parse("tel:" + mTutor.getPhone()));
-            startActivity(phoneIntent);
-        }
-    //}
+
 }

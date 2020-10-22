@@ -8,34 +8,17 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/locationTextView"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
         android:visibility="gone" />
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/locationTextView"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:textSize="15sp"
-        android:visibility="gone" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Beauty parlor near "
-        android:id="@+id/locationTextView"
-        android:layout_marginTop="35dp"
-        android:textSize="15sp"
-        android:layout_centerHorizontal="true"
-        android:visibility="gone" />
+
     <TextView
         android:id="@+id/errorTextView"
         android:layout_width="wrap_content"

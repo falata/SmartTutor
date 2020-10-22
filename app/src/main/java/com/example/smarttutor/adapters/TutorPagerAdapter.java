@@ -10,26 +10,26 @@ import com.example.smarttutor.ui.TutorDetailFragment;
 import java.util.List;
 
 public class TutorPagerAdapter extends FragmentPagerAdapter {
-    private List<TutorResponse> mTutor;
+    private List<TutorResponse> mTutors;
 
     public TutorPagerAdapter(FragmentManager fm, int behavior, List<TutorResponse> tutors) {
         super(fm, behavior);
-        mTutor  = tutors;
+        mTutors = tutors;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return TutorDetailFragment.newInstance(mTutor.get(position));
+        return TutorDetailFragment.newInstance(mTutors.get(position));
     }
 
     @Override
     public int getCount() {
-        return mTutor.size();
+        return mTutors.size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return mTutor .get(position).getName();
-
+        return mTutors.get(position).getName();
     }
+
 }

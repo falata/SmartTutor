@@ -28,15 +28,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBecomeTutor.setOnClickListener(this);
 
     }
-        @Override
-        public void onClick(View v) {
-            if (v == mFindTutorsButton) {
-                Intent intent = new Intent(MainActivity.this, TutorActivity.class);
-                startActivity(intent);
-            }
-            if (v == mBecomeTutor) {
-                Intent intent = new Intent(MainActivity.this, TutorFormActivity.class);
-                startActivity(intent);
-            }
+    @Override
+    public void onClick(View v) {
+        if (v == mFindTutorsButton) {
+            Intent intent = new Intent(MainActivity.this, TutorActivity.class);
+            startActivity(intent);
+        }
+        if (v == mBecomeTutor) {
+            Intent intent = new Intent(MainActivity.this, TutorFormActivity.class);
+            startActivity(intent);
+        }
+
         }
     }

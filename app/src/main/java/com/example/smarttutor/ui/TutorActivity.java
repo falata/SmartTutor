@@ -46,8 +46,6 @@ public class TutorActivity extends AppCompatActivity {
     public List<TutorResponse> tutors;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

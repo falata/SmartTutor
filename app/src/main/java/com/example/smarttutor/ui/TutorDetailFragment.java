@@ -25,14 +25,21 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class TutorDetailFragment extends Fragment{
-    @BindView(R.id.tutorImageView) ImageView mImageLabel;
-    @BindView(R.id.tutorNameTextView) TextView mNameLabel;
-    @BindView(R.id.subjectsTextView) TextView mSubjectsLabel;
-    @BindView(R.id.ratingTextView) TextView mRatingLabel;
-    @BindView(R.id.experienceTextView) TextView mExperienceLabel;
-    @BindView(R.id.phoneTextView) TextView mPhoneLabel;
-   @BindView(R.id. bioTextView) TextView mBioLabel;
+public class TutorDetailFragment extends Fragment implements View.OnClickListener {
+    @BindView(R.id.tutorImageView)
+    ImageView mImageLabel;
+    @BindView(R.id.tutorNameTextView)
+    TextView mNameLabel;
+    @BindView(R.id.subjectsTextView)
+    TextView mSubjectsLabel;
+    @BindView(R.id.ratingTextView)
+    TextView mRatingLabel;
+    @BindView(R.id.experienceTextView)
+    TextView mExperienceLabel;
+    @BindView(R.id.phoneTextView)
+    TextView mPhoneLabel;
+    @BindView(R.id.bioTextView)
+    TextView mBioLabel;
 
 
     private TutorResponse mTutor;
@@ -45,7 +52,6 @@ public class TutorDetailFragment extends Fragment{
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-
      * @return A new instance of fragment TutorDetailFragment.
      */
     public static TutorDetailFragment newInstance(TutorResponse tutor) {
@@ -59,6 +65,7 @@ public class TutorDetailFragment extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         mTutor = Parcels.unwrap(getArguments().getParcelable("tutor"));
     }
 
@@ -66,7 +73,7 @@ public class TutorDetailFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tutor_detail, container, false);
         ButterKnife.bind(this, view);
-
+        mPhoneLabel.setOnClickListener(this);
         Picasso.get().load(mTutor.getImageUrl()).into(mImageLabel);
         mNameLabel.setText(mTutor.getName());
         mSubjectsLabel.setText(mTutor.getSubjects());
@@ -75,5 +82,14 @@ public class TutorDetailFragment extends Fragment{
         mExperienceLabel.setText(mTutor.getExperience());
         mBioLabel.setText(mTutor.getBio());
         return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == mPhoneLabel) {
+            Intent phoneIntent = new Intent(Intent.ACTION_DIAL,
+                    Uri.parse("tel:" + mTutor.getPhone()));
+            startActivity(phoneIntent);
+        }
     }
 }

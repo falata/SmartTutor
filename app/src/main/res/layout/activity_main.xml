@@ -13,19 +13,7 @@ android:background="#000000">
     android:src="@drawable/background"
     android:scaleType="centerCrop" />
 
-    <TextView
-        android:id="@+id/appNameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/bubblegum_sans"
-        android:includeFontPadding="true"
-        android:text="SmartTutor"
-        android:textColor="@color/colorAccent"
-        android:textSize="50sp"
-        android:textStyle="bold" />
+
 <Button
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

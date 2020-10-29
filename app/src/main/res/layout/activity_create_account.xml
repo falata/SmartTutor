@@ -9,6 +9,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
         android:gravity="center"
         android:padding="10dp"
         android:text="@string/signUp"
@@ -21,14 +22,15 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@color/colorWhite"
+        android:background="@drawable/btn_email_password"
         android:drawableLeft="@drawable/user"
         android:drawablePadding="8dp"
+        android:fontFamily="@font/roboto"
         android:gravity="center_vertical"
         android:hint="@string/fullName"
         android:inputType="textCapWords"
-        android:padding="10dp"
         android:nextFocusForward="@id/nameEditText"
+        android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
@@ -37,20 +39,21 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="1px"
-        android:background="@color/white" />
+        android:background="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:background="@android:color/white"
+        android:background="@drawable/btn_email_password"
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="8dp"
+        android:fontFamily="@font/roboto"
         android:gravity="center_vertical"
         android:hint="@string/email"
-        android:nextFocusForward="@+id/emailEditText"
         android:inputType="textEmailAddress"
+        android:nextFocusForward="@+id/emailEditText"
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/black"
@@ -60,20 +63,21 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="1px"
-        android:background="@color/white" />
+        android:background="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/mobileEditText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:nextFocusForward="@+id/mobileEditText"
-        android:background="@android:color/white"
+        android:background="@drawable/btn_email_password"
         android:drawableLeft="@drawable/phone"
         android:drawablePadding="8dp"
+        android:fontFamily="@font/roboto"
         android:gravity="center_vertical"
         android:hint="@string/mobileNumber"
         android:inputType="phone"
+        android:nextFocusForward="@+id/mobileEditText"
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/black"
@@ -83,20 +87,21 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="1px"
-        android:background="@color/white" />
+        android:background="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/locationEditText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:background="@android:color/white"
+        android:background="@drawable/btn_email_password"
         android:drawableLeft="@drawable/location"
         android:drawablePadding="8dp"
+        android:fontFamily="@font/roboto"
         android:gravity="center_vertical"
         android:hint="@string/location"
-        android:nextFocusForward="@+id/locationEditText"
         android:inputType="textCapWords"
+        android:nextFocusForward="@+id/locationEditText"
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/black"
@@ -106,20 +111,21 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="1px"
-        android:background="@color/white" />
+        android:background="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:background="@android:color/white"
+        android:background="@drawable/btn_email_password"
         android:drawableLeft="@drawable/password"
-        android:nextFocusForward="@+id/passwordEditText"
         android:drawablePadding="8dp"
+        android:fontFamily="@font/roboto"
         android:gravity="center_vertical"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:nextFocusForward="@+id/passwordEditText"
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/black"
@@ -129,32 +135,36 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="1px"
-        android:background="@color/white" />
+        android:background="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/confirmPasswordEditText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:background="@android:color/white"
+        android:background="@drawable/btn_email_password"
         android:drawableLeft="@drawable/password"
         android:drawablePadding="8dp"
-        android:nextFocusForward="@+id/confirmPasswordEditText"
+        android:fontFamily="@font/roboto"
         android:gravity="center_vertical"
         android:hint="@string/confirmPassword"
         android:inputType="textPassword"
+        android:nextFocusForward="@+id/confirmPasswordEditText"
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="16sp" />
 
-    <CheckBox
+    <TextView
         android:id="@+id/terms_conditions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
         android:text="@string/terms_conditions"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="14sp" />
 
@@ -163,7 +173,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@color/colorBackground"
+        android:background="@drawable/btn_rounded"
+        android:fontFamily="@font/roboto"
         android:padding="3dp"
         android:text="@string/signUp"
         android:textColor="@color/colorAccent"
@@ -176,6 +187,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"
         android:gravity="center"
         android:padding="10dp"
         android:text="@string/already_user"

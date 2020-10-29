@@ -17,7 +17,7 @@
     <string name="hide_pwd">Hide Password</string>
     <string name="forgot">Forgot password?</string>
     <string name="closebutton">Close Button for Activity</string>
-    <string name="newUser">Not a Member yet? Sign Up here.</string>
+    <string name="newUser">Not a Member? Sign Up here.</string>
     <string name="fullName">Full Name</string>
     <string name="mobileNumber">Mobile Number</string>
     <string name="location">Location</string>

@@ -6,40 +6,44 @@ tools:context="com.example.smarttutor.ui.MainActivity"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="#000000">
-<ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:id="@+id/imageView"
-    android:src="@drawable/background"
-    android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
 
 
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text=" Become a Tutor"
-    android:fontFamily="@font/bubblegum_sans"
-    android:id="@+id/becomeTutor"
-    android:background="@color/colorPrimary"
-    android:textColor="@color/colorTextIcons"
-    android:visibility="visible"
-    android:textSize="30sp"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"/>
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Find Tutors"
-    android:textSize="30sp"
-    android:visibility="visible"
-    android:fontFamily="@font/bubblegum_sans"
-    android:id="@+id/findTutorsButton"
-    android:layout_alignParentStart="true"
-    android:layout_above="@+id/becomeTutor"
-    android:layout_alignParentLeft="true"
-    android:layout_marginBottom="20dp"
-    android:background="@color/colorAccent"
-    android:textColor="@color/colorTextIcons" />
+    <Button
+        android:id="@+id/becomeTutor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_main"
+        android:fontFamily="@font/roboto"
+        android:text=" Become a Tutor"
+        android:padding="3dp"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="17sp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/findTutorsButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/becomeTutor"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:padding="3dp"
+        android:background="@drawable/btn_main"
+        android:fontFamily="@font/roboto"
+        android:text="Find Tutors"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="17sp"
+        android:visibility="visible" />
 
 </RelativeLayout>

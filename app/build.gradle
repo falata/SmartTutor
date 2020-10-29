@@ -47,7 +47,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    //implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
     //Robolectric dependencies
     testImplementation 'org.robolectric:robolectric:4.2'
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -58,8 +59,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     androidTestImplementation 'androidx.test:rules:1.1.0'
     androidTestImplementation 'androidx.test:runner:1.1.1'
-    //viewpager
-   // implementation "androidx.viewpager2:viewpager2:1.0.0"
     //butterknife
     implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
@@ -73,7 +72,7 @@ dependencies {
     implementation 'com.google.api-client:google-api-client:1.23.0'
     implementation 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
     implementation 'com.google.apis:google-api-services-calendar:v3-rev305-1.23.0'
-    //RecylcerView
+    //RecyclerView
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     // Picasso image processing
     implementation 'com.squareup.picasso:picasso:2.71828'
@@ -84,9 +83,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.7'
     //implementation 'com.google.firebase:firebase-database:16.0.6'
     implementation 'com.firebaseui:firebase-ui-database:3.3.1'
-    //firebaseRecyclervie
+    //firebaseRecyclerview
     implementation 'com.firebaseui:firebase-ui-database:3.3.1'
     //firebase auth
     implementation 'com.google.firebase:firebase-auth:16.1.0'
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation 'com.google.firebase:firebase-analytics'
 }
 
+apply plugin: 'com.google.gms.google-services'

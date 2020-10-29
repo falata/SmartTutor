@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "666565423792",
+    "firebase_url": "https://smarttutor-de39e.firebaseio.com",
+    "project_id": "smarttutor-de39e",
+    "storage_bucket": "smarttutor-de39e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666565423792:android:3867bd9680bf9b9aa08175",
+        "android_client_info": {
+          "package_name": "com.example.smarttutor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666565423792-724hlocpff7c7bg2a78at21i415prh22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhMwlxnREI4aIGUVxFQzI5A9x3qxhz6_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666565423792-724hlocpff7c7bg2a78at21i415prh22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,9 +4,9 @@ import android.content.Context;
 import android.widget.ArrayAdapter;
 
 public class TutorArrayAdapter extends ArrayAdapter {
-    private Context mContext;
-    private String[] mRestaurants;
-    private String[] mCuisines;
+    private final Context mContext;
+    private final String[] mRestaurants;
+    private final String[] mCuisines;
 
     public TutorArrayAdapter(Context mContext, int resource, String[] mRestaurants, String[] mCuisines) {
         super(mContext, resource);

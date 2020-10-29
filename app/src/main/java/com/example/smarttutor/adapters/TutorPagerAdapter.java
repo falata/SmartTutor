@@ -9,7 +9,7 @@ import com.example.smarttutor.ui.TutorDetailFragment;
 
 import java.util.List;
 
-public class TutorPagerAdapter  extends FragmentPagerAdapter {
+public class TutorPagerAdapter extends FragmentPagerAdapter {
     private List<TutorResponse> mTutors;
 
     public TutorPagerAdapter(FragmentManager fm, int behavior, List<TutorResponse> tutors) {
